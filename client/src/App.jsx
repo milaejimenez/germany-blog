@@ -2,9 +2,10 @@ import { useState } from 'react'
 import {
   createBrowserRouter,
   RouterProvider,
-  Router
+  Router,
+  Outlet
 } from "react-router-dom";
-import './App.css'
+import './style.scss'
 
 //Import pages
 import Home from "./pages/Home";
@@ -13,10 +14,38 @@ import Login from "./pages/Login";
 import Single from "./pages/Single";
 import Write from "./pages/Write";
 
+//Import components
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+
+const Layout = () => {
+  return (
+    <>
+      <Header/>
+      <Outlet/>
+      <Footer/>
+    </>
+  )
+}
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>
+    element: <Layout/>,
+    children: [
+      {
+        path: "/",
+        element: <Home/>
+      },
+      {
+        path: "/single",
+        element: <Single/>
+      },
+      {
+        path: "/write",
+        element: <Write/>
+      },
+    ]
   },
   {
     path: "/register",
@@ -25,14 +54,6 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login/>
-  },
-  {
-    path: "/single",
-    element: <Single/>
-  },
-  {
-    path: "/write",
-    element: <Write/>
   },
 ])
 
