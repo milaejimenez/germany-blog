@@ -1,9 +1,14 @@
+@font-face {
+  font-family: Spartan;
+  src: url(./assets/fonts/LeagueSpartan.ttf);
+}
+
 #root {
   max-width: 1280px;
   width: 70vw;
   margin: 0 auto;
   
-  font-family: "Spartan", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Spartan, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

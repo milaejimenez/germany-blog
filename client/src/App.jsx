@@ -5,7 +5,9 @@ import {
   Router,
   Outlet
 } from "react-router-dom";
+
 import './style.scss'
+
 
 //Import pages
 import Home from "./pages/Home";
