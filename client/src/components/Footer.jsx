@@ -4,11 +4,11 @@ function Footer() {
   return (
     <footer>
       <div>
-        <h5>About</h5>
+        <h3>About</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo repellat cumque in qui non ipsa quis, quibusdam veniam quae ipsam vitae a optio incidunt hic, amet blanditiis! Est, soluta accusamus?</p>
       </div>
       <div>
-        <h5>Categories</h5>
+        <h3>Categories</h3>
         <nav className='categories-nav'>
           <ul>
             <li>LINK</li>
@@ -25,7 +25,7 @@ function Footer() {
         </nav>
       </div>
       <div className='social-media'>
-        <h5>Follow Us</h5>
+        <h3>Follow Us</h3>
         <div className='soc'>
           <div className='soc-item'>
           <span className="icon icon-facebook"></span>

@@ -8,6 +8,7 @@ const Guides = ({ posts }) => {
             <h2>Germany: A User's Manual</h2>
             <div className='dash-line'></div>
         </div>
+        <div className='articles'>
         { posts.map( post => (
             <div className='article'>
                 <img src={picture}></img>
@@ -18,6 +19,7 @@ const Guides = ({ posts }) => {
                 </div>
             </div>
         ))}
+        </div>
     </div>
   )
 }
