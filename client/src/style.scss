@@ -1,10 +1,10 @@
-
 @font-face {
   font-family: Spartan;
   src: url(./assets/fonts/LeagueSpartan.ttf);
 }
 
 #root {
+  box-sizing: border-box;
   max-width: 1280px;
   width: 75vw;
   margin: 0 auto;
@@ -34,6 +34,30 @@ h2 {
   font-size: 3rem;
   font-weight: 500;
   text-transform: capitalize;
+}
+
+.btn {
+  box-sizing: border-box;
+  background-image: linear-gradient(to right, #e53935 0%, #e35d5b  51%, #e53935  100%);
+  width: 95%;
+  margin: 3.5rem 1rem;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;         
+  box-shadow: 0 20px 20px rgb(217 61 89 / 20%);
+  border: none;
+  border-radius: 3rem;
+  display: block;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
 header {
@@ -112,28 +136,6 @@ header {
     height: 150px;
     object-fit: cover;
   }
-           
-  .btn-allposts {
-    background-image: linear-gradient(to right, #e53935 0%, #e35d5b  51%, #e53935  100%);
-    width: 100%;
-    margin: 3.5rem 1rem;
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;         
-    box-shadow: 0 20px 20px rgb(217 61 89 / 20%);
-    border: none;
-    border-radius: 3rem;
-    display: block;
-  }
-
-  .btn-allposts:hover {
-    background-position: right center; /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
-  }
 
 }
 
@@ -193,4 +195,87 @@ footer {
 
 }
 
+// Register and login pages
+
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: clamp(300px, 30vw, 700px);
+    margin: 2rem;
+  }
+
+  input {
+    padding: 1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px lightgray;
+  }
+
+  input::placeholder {
+    font-size: 1rem;
+    color: #C4C4C4;
+  }
+
+  p {
+    color: red;
+    text-align: center;
+  }
+}
+
+
+// Write page
+.write {
+  display: flex;
+
+  .title {
+    box-sizing: border-box;
+    width: 100%;
+    height: 2rem;
+    margin: 1rem 0;
+  }
+
+  .title::placeholder {
+    padding: 0.5rem;
+    color: lightgrey;
+    text-transform: capitalize;
+  }
+
+  .editor-container {
+    height: 400px;
+    overflow: scroll;
+  }
+
+  .editor {
+    height: 100%;
+  }
+
+  .content {
+    flex: 5;
+  }
+
+  .menu {
+    flex: 1;
+    padding: 3rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
 

@@ -13,7 +13,7 @@ const Sidebar = ({posts }) => {
                 </div>
                 </div>
             ))}
-            <button className='btn-allposts'>View All</button>
+            <button className='btn'>View All</button>
         </div>
     )
 }
