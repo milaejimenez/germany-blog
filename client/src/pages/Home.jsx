@@ -3,6 +3,8 @@ import React from 'react';
 //Import components
 import PostWidget from '../components/PostWidget'
 import Sidebar from '../components/Sidebar'
+import Guides from '../components/Guides'
+import Categories from '../components/Categories';
 
 import picture from '../assets/images/berlin-youth.jpg';
 
@@ -42,7 +44,7 @@ const Home = () => {
   return (
     <div className='recent'>
       <div className='section-title'>
-        <h2>RECENT POSTS</h2>
+        <h2>Recent Posts</h2>
         <div className='dash-line'></div>
       </div>
       <div className='posts-wrapper'>
@@ -50,6 +52,8 @@ const Home = () => {
         <div className='sidebar-recent'></div> */}
         <PostWidget posts={posts} />
         <Sidebar posts={posts} />
+        <Guides posts={posts} />
+        <Categories />
       </div>
     </div>
   )

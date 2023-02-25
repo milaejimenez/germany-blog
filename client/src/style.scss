@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: Spartan;
   src: url(./assets/fonts/LeagueSpartan.ttf);
@@ -21,7 +22,7 @@
   -webkit-text-size-adjust: 100%;
 }
  
-body, h1, a, ul  {
+body, h1, h2, a, ul  {
   margin: 0;
   padding: 0;
   color: #000;
@@ -31,7 +32,8 @@ body, h1, a, ul  {
 
 h2 {
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 header {
@@ -73,7 +75,7 @@ header {
   flex: 1;
   display: flex;
   align-items: baseline;
-  height: 120px;
+  height: 5rem;
 
   .dash-line {
     flex-grow: 1;
@@ -85,7 +87,7 @@ header {
 .posts-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 30px;
 };
 
 .posts-container {
@@ -101,11 +103,53 @@ header {
   };
 }
 
-.recent-sidebar img {
+.recent-sidebar {
+
+  padding: 20px;
+  
+  img {
     width: 100%;
     height: 150px;
+    object-fit: cover;
+  }
+           
+  .btn-allposts {
+    background-image: linear-gradient(to right, #e53935 0%, #e35d5b  51%, #e53935  100%);
+    width: 100%;
+    margin: 3.5rem 1rem;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;         
+    box-shadow: 0 20px 20px rgb(217 61 89 / 20%);
+    border: none;
+    border-radius: 3rem;
+    display: block;
+  }
+
+  .btn-allposts:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
 }
 
+.categories {
+  grid-column: 2 / 3;
+
+  li {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  a {
+    padding: 2rem 0;
+    text-transform: uppercase;
+  }
+}
 
 
 // Footer
