@@ -1,23 +1,17 @@
 import express from "express"
-import mysql from "mysql"
+import cors from "cors"
+import usersRoutes from "./routes/users.js"
+import postsRoutes from "./routes/posts.js"
+import authRoutes from "./routes/auth.js"
 
 const app = express()
 
-const db = mysql.createConnection({
-    host:"localhost",
-    user:"root",
-    password:"auto0634",
-    database:"germany-blog",
-})
+app.use(cors())
 
-
-app.get("/", (req, res) => {
-    const q = "SELECT * FROM users"
-    db.query(q, (err, data) => {
-        if (err) return res.json(err)
-        return res.json(data)
-    })
-})
+app.use(express.json())
+app.use("/users", usersRoutes)
+app.use("/posts", postsRoutes)
+app.use("/auth", authRoutes)
 
 app.listen(8800, () => {
     console.log("Connected to backend")
